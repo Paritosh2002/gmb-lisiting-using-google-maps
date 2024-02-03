@@ -91,7 +91,7 @@ def data_load(targets):
                 temp = []
                 temp.append(label[0]) # name of buisness
                 temp.append(ref[0]) # link for buisness
-                for pat in patterns:
+                for pat in patterns:  # code for address,phone no, website url
                     var = False 
                     for x in label :
                         if pat in x:
@@ -100,7 +100,7 @@ def data_load(targets):
                             break
                     if not var :
                         temp.append(None)
-                temp.append(target)
+                temp.append(target)  # type of buisness eg. restaurant , hotel,etc
                 references = ''
                 for l in range(1,len(ref)):
                     if ref[l] is not None :
